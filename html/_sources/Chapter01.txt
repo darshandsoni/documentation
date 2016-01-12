@@ -1,4 +1,4 @@
-Site Structure
+Phase 1 - Site Structure
 ==============
 
 Page structure
