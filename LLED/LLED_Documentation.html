@@ -7,11 +7,10 @@
 <meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Darshan Soni">
 <title>LLED Website Transition Report</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
 /* Remove comment around @import statement below when using as a custom stylesheet */
-/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,600italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
 audio,canvas,video{display:inline-block}
 audio:not([controls]){display:none;height:0}
@@ -79,7 +78,7 @@ a:hover,a:focus{color:#1d4b8f}
 a img{border:none}
 p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
 p aside{font-size:.875em;line-height:1.35;font-style:italic}
-h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:600;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
 h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
 h1{font-size:2.125em}
 h2{font-size:1.6875em}
@@ -416,7 +415,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .print-only{display:block!important}
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
+
+/* CUSTOMISATIONS */
+
+h1{color:#2c3e50 !important;}
+h2{color:#ba3925 !important;}
+h3{color:#ba3925 !important;}
+h4{color:#2c3e50 !important;}
+.title{color:#186d7a !important; font-family:"Noto Sans",sans-serif !important;font-style: normal !important; font-weight: normal !important;}
+p{font-family: "Noto Sans",sans-serif ! important}
+
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 <style>
 /* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
 /*pre.CodeRay {background-color:#f7f7f8;}*/
@@ -515,7 +525,6 @@ table.CodeRay td.code>pre{padding:0}
 <div class="details">
 <span id="author" class="author">Darshan Soni</span><br>
 <span id="email" class="email"><a href="mailto:darshan@alumni.ubc.ca">darshan@alumni.ubc.ca</a></span><br>
-<span id="revdate">---</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -623,7 +632,7 @@ table.CodeRay td.code>pre{padding:0}
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 These milestone dates are subject to change during the course of the project.
@@ -641,7 +650,7 @@ The website update will be extended to September 2016. In this case, the 2nd pha
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 First reveal to stay on Schedule - Week of April 15th
@@ -983,7 +992,7 @@ In the old website, the <strong>Faculty and staff</strong> page has served a dua
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 Anthony suggested adding a dedicated Research page as well. This would showcase Faculty and Grad student research like news articles. The page would also have an archive section with annual research material.
@@ -1060,6 +1069,39 @@ This:</p>
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>For unordered lists,
+This</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="html"><span class="tag">&lt;ol&gt;</span>
+  <span class="tag">&lt;li&gt;</span> Item 1
+  <span class="tag">&lt;li&gt;</span> Item 2
+  <span class="tag">&lt;li&gt;</span> Item 3
+<span class="tag">&lt;/ol&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Displays this:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Item 1</p>
+</li>
+<li>
+<p>Item 2</p>
+</li>
+<li>
+<p>Item 3</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_links">Links</h3>
@@ -1078,7 +1120,7 @@ This:</p>
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 Links should preferably open in a new tab by default (subject the author&#8217;s discretion). This avoids users having to lose the page they are currently on. The <code>target="_blank"</code> part implements this automatically.
@@ -1320,7 +1362,7 @@ Application deadline: <span class="tag">&lt;span</span> <span class="attribute-n
 <table>
 <tr>
 <td class="icon">
-<div class="title">Tip</div>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 Remember to click on "Job Posting" as the category.
@@ -1438,7 +1480,7 @@ Remember to click on "Job Posting" as the category.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-05-11 10:55:12 PDT
+Last updated 2016-05-11 15:06:36 PDT
 </div>
 </div>
 </body>

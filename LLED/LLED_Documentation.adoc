@@ -2,7 +2,8 @@
 Darshan Soni <darshan@alumni.ubc.ca>
 :source-highlighter: coderay
 :toc: left
----
+:stylesheet: material.css
+:icons: font
 
 == Introduction
 
@@ -234,6 +235,23 @@ Displays this:
 3. Item 3
 ****
 
+For unordered lists,
+This
+[source,html]
+----
+<ol>
+  <li> Item 1
+  <li> Item 2
+  <li> Item 3
+</ol>
+----
+
+Displays this:
+****
+* Item 1
+* Item 2
+* Item 3
+****
 
 === Links
 
@@ -262,6 +280,7 @@ To implement a button linking to another page, copy the following code:
 ----
 <a class="btn btn-default" target="_blank" href="PASTE_LINK_IN_HERE">TEXT_TO_DISPLAY_HERE</a>
 ----
+
 
 === Coloured Buttons
 
