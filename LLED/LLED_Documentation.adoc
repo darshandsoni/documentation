@@ -1,7 +1,7 @@
 = LLED Website Transition Report
 Darshan Soni <darshan@alumni.ubc.ca>
-Version date: {revdate}
 :source-highlighter: coderay
+:toc: left
 ---
 
 == Introduction
@@ -17,7 +17,7 @@ This report details the LLED website update from January 2016 to the end of July
 |Time period | Activity
 |January 8 - January 25 | Site hierarchy and review of page structure
 |January 14 - February 10| Page and information reorganisation - Improving information layout
-|January 21 - February 19 | Analytics on site usage - prioritising where information is placed on the website to make it easy to use.
+|January 21 - February 19 | Analytics on site usage - prioritising where information is placed on the website to make it easy to use
 |January 27 - March 1| Information updating - collaboration with LLED faculty / staff / students
 |February 18 - March 18| Aesthetic review - theming the site and developing a distinct LLED user interface
 |February 18 - March 18| Updating the "People" page plugin to showcase the LLED faculty and their research better
@@ -25,8 +25,8 @@ This report details the LLED website update from January 2016 to the end of July
 |April 15 - April 29 | Reveal site on April 15 and evaluate it until the 29th
 |========
 
-NOTE: These milestone dates may change during the course of the project.
-The website update may possibly be extended to September 2016. In this case, the 2nd phase will focus on developing better content for the site, including working with more photography, writing and user interface design.
+NOTE: These milestone dates are subject to change during the course of the project.
+The website update will be extended to September 2016. In this case, the 2nd phase will focus on developing better content for the site, including working with more photography, writing and user interface design.
 
 
 
@@ -296,12 +296,12 @@ For UBC default colours see UBC Brand Guidelines: http://brand.ubc.ca/about-the-
 [width="80%" options="header"]
 |====
 | Colour | Hex | Name | Class
-|image::images/red.png[] |#e74c3c| Alizarin **Red** | Certificate
-|image::images/blue.png[] |#3498db| Peter River **Blue** | Diploma
-|image::images/yellow.png[] |#f1c40f| Sun Flower **Yellow** | MEd
-|image::images/green.png[] |#2ecc71| Emerald **Green** | MA
-|image::images/purple.png[] |#9b59b6| Amethyst **Purple** | EdD
-|image::images/grey.png[] |#95a5a6| Concrete **Greybutton** | PhD
+|image:images/red.png[] |#e74c3c| Alizarin **Red** | Certificate
+|image:images/blue.png[] |#3498db| Peter River **Blue** | Diploma
+|image:images/yellow.png[] |#f1c40f| Sun Flower **Yellow** | MEd
+|image:images/green.png[] |#2ecc71| Emerald **Green** | MA
+|image:images/purple.png[] |#9b59b6| Amethyst **Purple** | EdD
+|image:images/grey.png[] |#95a5a6| Concrete **Greybutton** | PhD
 |====
 
 These colours are recommended secondary colours specified by the faculty. They are listed at http://flatuicolors.com
@@ -422,3 +422,14 @@ Student resources are not as frequently used as the departmental ones. There are
 
 .The new student resources page
 image::images/StudentResources.png[]
+
+<<<
+
+=== People
+
+The new People pages showcase the Faculty, Sessional and 12 month lecturers, Staff and Emeritae/Emeriti.
+
+All the subpages listed above were on separate sections of the old website. Putting under 1 umbrella - people - makes it easier to look for a particular person in the department. Each profile is housed in with the Spotlight feature. This allows listed people to stand out, but still be shown equally on a page.
+
+.Example of a "People" page - The Faculty page
+image::images/Faculty.png[]
