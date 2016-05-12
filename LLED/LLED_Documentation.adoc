@@ -30,7 +30,6 @@ NOTE: These milestone dates are subject to change during the course of the proje
 The website update will be extended to September 2016. In this case, the 2nd phase will focus on developing better content for the site, including working with more photography, writing and user interface design.
 
 
-
 == Work plan: May - July
 NOTE: First reveal to stay on Schedule - Week of April 15th
 
@@ -118,9 +117,7 @@ The following analytics were taken over a 3 month period from January to March 2
 
 The analytics tools were graciously provided by Olga Glukhovska, a UX specialist who worked with UBC Marketing and Communications at the time.
 
-=== General Analytics
-
-.New vs Returning users
+=== New vs Returning users
 When the user interface was designed, new and existing users were taken into consideration because that determines the balance of a familiar design vs an attractive, novel layout.
 
 image::images/NewVsReturning.png[]
@@ -141,6 +138,21 @@ Operating system and browser choices are an important metric to design the site 
 Users of Internet explorer versions below 10 would suffer from many glitches and poor security. Because there are only a handful of IE 7,8 and 9 users the website will be extensively designed for modern browsers. The demographic of IE users is expected to decline following the transition to "Microsoft Edge" browsers and so no special efforts will be made to make website features available to obsolete browsers. Having said that, all text content would be readable to them, only multimedia features such as embedded video or display optimizations would be broken.
 
 image:images/OS.png[] image:images/Browser.png[]
+
+=== Device size
+
+While the new CLF is fully scalable - displays well on desktops, mobiles and tablets - it's important to factor in what devices users are accessing the site from to ensure content is designed to display well. A popular trend in web development at the time of this report is to design websites to be mobile first. This means content is designed to be viewed on a mobile device only, assuming it would display well enough on a desktop device. While developing this website, I have chosen to deliberately differ from this status quo. I have instead chosen to design the new LLED site to be "Device Agnostic" meaning it is designed for all devices in mind, regardless of their screen size, but optimised for the most popular device. The analytics data shows that website access on a mobile device is exremely low. Therefore, while the site remains accessible to all devices, no special attention will be given to make sure it displays well on a mobile screen. This fits in line with the typical usage of the site as an information hub. Faculty members are likely to access it from a computer while working, staff are all equipped with a desktop screen and students are unlikely to review application requirements or complete entire applications from a mobile device.
+
+Pages such as "Contact Us" could occasionally be pulled up on a mobile device to quickly find information, and such pages have been designed to deliver information quickly.
+
+image::images/Device.png[]
+image::images/WindowWidth.png[]
+
+=== Other analytics
+
+Some other analytics that aren't used, but interesting to know anyway...
+
+image::images/Country.png[]
 
 ---
 
@@ -213,7 +225,6 @@ Displays this:
 ****
 
 Try to ensure they maintain hierarchy within the page. e.g. If a section is nested under "Applications" and "Applications"  is a h2 level heading, then the new nested section should get a h3 level heading.
-
 
 === Lists
 
