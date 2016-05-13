@@ -154,6 +154,8 @@ Some other analytics that aren't used, but interesting to know anyway...
 
 image::images/Country.png[]
 
+image::
+
 ---
 
 == Site Navigation
@@ -318,7 +320,7 @@ For UBC default colours see UBC Brand Guidelines: http://brand.ubc.ca/about-the-
 [width="80%" options="header"]
 |====
 | Colour | Hex | Name
-|image::images/blue.png[] | #3498db| Peter River **Blue** |
+|image:images/blue.png[] | #3498db| Peter River **Blue** |
 |====
 
 ==== Program colour codes
@@ -463,3 +465,51 @@ All the subpages listed above were on separate sections of the old website. Putt
 
 .Example of a "People" page - The Faculty page
 image::images/Faculty.png[]
+
+== Quick How-to Guide
+
+=== Homepage
+
+==== Carousel image
+
+To update the carousel with a new image,
+
+1. Create a slider image according to the specifications outlined [here]().
+2. On the site dashboard, click "New" and select "Post".
+3. Give it a title and then click on "Add Media" and upload the slider image.
+4. Click on "Set a featured image" and select the same image you uploaded.
+5. Under the "Categories" menu, select the category the post belongs in (usually "News and Events") and then select "Slideshow" if you also want the post to appear on the home page carousel.
+
+==== Twitter Widget
+
+At the time of writing this report, the twitter widget works and displays all content. The widget is not maintained by UBC, it is the standard twitter embed feature.
+
+Some users report not seeing the widget. In this case, it's normally due to their browser's ad-blocker plugin. If they report this issue, the best advice might be to add this particular widget to the "safe" list on their ad-blocker.
+
+=== Job posting
+
+See the section on <<_job_postings>>
+
+=== New and events
+
+Make a new post. Before publishing, ensure that the category selection in the panel to the right of the page is "New and events".
+
+=== Research
+
+This page will auto-populate with all posts that are given the "Research" category.
+
+To make a new post, visit the http://lled.educ.ubc.ca/research/[Research] page and click on "Submit new post". Enter in all the details here and submit the post.
+
+Because this feature is publicly available, the post will be saved as a draft instead of being published. A site administrator (member of staff e.g. Ana or Lia) would receive an email about it, and can then go in to the site and approve the post.
+
+WARNING: Adding a post in the Research category should be done as outlined above instead of the usual manual post creation method because there is a preset format for the post. Creating a post manually (New -> Post) and then creating content from scratch would be cumbersome and would display poorly on the page.
+
+NOTE: The Research page automatically pools in all the research posts and displays a selection of the latest ones in a mosaic-like layout. This is all done automatically according to a best fit model. Changing the layout of the page should be done very carefully.
+
+=== Courses
+
+See the section on <<_courses>>
+
+=== Programs
+
+The programs landing page is CSS heavy. The content on it rarely needs change, unless an entire program is renamed / scrapped or added. In this instance, try and use the **text** layout, instead of the **visual** one to edit content. The text layout window may look ugly with a lot of html markup, but it's important to be able to tell where you're putting in content so you don't break the page layout. This is not a difficult task but should be done by someone who is somewhat familiar with basic HTML / CSS notation.
