@@ -524,3 +524,12 @@ See the section on <<_courses>>
 === Programs
 
 The programs landing page is CSS heavy. The content on it rarely needs change, unless an entire program is renamed / scrapped or added. In this instance, try and use the **text** layout, instead of the **visual** one to edit content. The text layout window may look ugly with a lot of html markup, but it's important to be able to tell where you're putting in content so you don't break the page layout. This is not a difficult task but should be done by someone who is somewhat familiar with basic HTML / CSS notation.
+
+=== Pictures
+
+The following websites have some CC pictures that can be used for backgrounds / promotional materials on the LLED site.
+
+1. https://www.flickr.com/photos/134760388@N08/sets[UBC C&M Flickr Page] - Images free for use by UBC units.
+2. https://unsplash.com/[Unsplash] - Creative Common's Zero licence - Copy, modify, distribute and use the photos for free, including commercial purposes, without asking permission from or providing attribution to the photographer or Unsplash.
+3. http://www.beiz.jp/[Beiz (Japanese)] - The contract on the site (link provided by Yuya Takeda) suggests all material is free for use.
+4. http://dohliam.github.io/yub/[The yub search engine] - Type in "fcc" and any topic e.g. fcc flowers for cc pictures of flowers. These are sourced from Flickr's creative commons.
