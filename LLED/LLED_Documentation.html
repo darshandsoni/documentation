@@ -547,6 +547,16 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_new_page_structure">New page structure</a></li>
 </ul>
 </li>
+<li><a href="#_site_features">Site Features</a>
+<ul class="sectlevel2">
+<li><a href="#_courses">Courses</a></li>
+<li><a href="#_job_postings">Job Postings</a></li>
+<li><a href="#_people">People</a></li>
+<li><a href="#_programs">Programs</a></li>
+<li><a href="#_quick_search">Quick Search</a></li>
+<li><a href="#_resources">Resources</a></li>
+</ul>
+</li>
 <li><a href="#_style_guide">Style Guide</a>
 <ul class="sectlevel2">
 <li><a href="#_headings">Headings</a></li>
@@ -559,17 +569,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_the_spotlight">The Spotlight</a></li>
 </ul>
 </li>
-<li><a href="#_site_features">Site Features</a>
-<ul class="sectlevel2">
-<li><a href="#_job_postings">Job Postings</a></li>
-<li><a href="#_courses">Courses</a></li>
-<li><a href="#_programs">Programs</a></li>
-<li><a href="#_resources">Resources</a></li>
-<li><a href="#_people">People</a></li>
-<li><a href="#_quick_search">Quick Search</a></li>
-</ul>
-</li>
-<li><a href="#_quick_how_to_guide">Quick How-to Guide</a>
+<li><a href="#_how_to_guide">How-to Guide</a>
 <ul class="sectlevel2">
 <li><a href="#_homepage">Homepage</a></li>
 <li><a href="#_job_posting">Job posting</a></li>
@@ -1055,6 +1055,186 @@ Anthony suggested adding a dedicated Research page as well. This would showcase 
 </div>
 </div>
 <div class="sect1">
+<h2 id="_site_features">Site Features</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_courses">Courses</h3>
+<div class="paragraph">
+<p>Courses on the new site are pulled in automatically from the calendar to avoid the tedious work of making posts for each course in each session. The new Courses page is set up to automatically display the Winter and Summer courses for the current year. This means no additional work for the office staff in terms of displaying courses on the front end. The downside of this is that office staff no longer have control over the titles and data displayed. As a compromise, each course accordion has a "Note" section before displaying courses. This section can be manually edited to point out whether courses are cross-listed or have special titles set by the instructors that are not reflected by UBC calendar. This isn&#8217;t the same degree of control as the old site, but it also eliminates the need for hours of course information input, communication erros and site clutter due to too many posts.</p>
+</div>
+<div class="paragraph">
+<div class="title">Technical details</div>
+<p>The courses are pulled in using the courses-shortcode plugin. This is relatively new and LLED would be the first department within the faculty to make use of it.</p>
+</div>
+<div class="paragraph">
+<p>Winter courses are pulled in using the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="html">[ubccourses department=&quot;LLED&quot; stickyyear=&quot;true&quot; stickywinter=&quot;W&quot; tabcount=&quot;g&quot;]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_job_postings">Job Postings</h3>
+<div class="paragraph">
+<p>Job postings can be added the same way as any other post, simply remember to choose the "Job Posting" category before publishing. After a Job Posting has expired, edit it and change it&#8217;s category to "Job Posting - Archive".</p>
+</div>
+<div class="paragraph">
+<p>Job postings have some specific formatting that needs to be followed. It may be best to open up an already existing Job Posting and copy data to the blank one you are making. Then edit the fine details.</p>
+</div>
+<div class="paragraph">
+<p>Each job posting needs to have the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Insert a title to briefly describe the area of employment e.g. Summer 2016 - Teaching English as a Foreign Language GTAs.</p>
+</li>
+<li>
+<p>Add a heading (h3 level) for the job  e.g. Part-time Graduate Teaching Assistants.</p>
+</li>
+<li>
+<p>Upload a PDF version of the posting by clicking on "Add Media". This will add a <code>&lt;a href=&#8230;&#8203;</code> section in the post.</p>
+</li>
+<li>
+<p>Below that <code>&lt;a href=&#8230;&#8203;</code> line, paste the following and add the correct date:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="html">Application deadline: <span class="tag">&lt;span</span> <span class="attribute-name">style</span>=<span class="string"><span class="delimiter">&quot;</span><span class="key">color</span>: <span class="color">#ff0000</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;strong&gt;</span>May 20, 2016<span class="tag">&lt;/strong&gt;</span><span class="tag">&lt;/span&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, in the Excerpt section, paste the following code in, editing the position and deadline as necessary:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="html">Part-time Graduate Teaching Assistants <span class="tag">&lt;br&gt;</span>
+Application deadline: <span class="tag">&lt;span</span> <span class="attribute-name">style</span>=<span class="string"><span class="delimiter">&quot;</span><span class="key">color</span>: <span class="color">#ff0000</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;strong&gt;</span>May 20, 2016<span class="tag">&lt;/strong&gt;</span><span class="tag">&lt;/span&gt;</span></code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Remember to click on "Job Posting" as the category.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>department = "LLED" filters only LLED courses out.</p>
+</li>
+<li>
+<p>stickyyear with a true value makes sure the year is always the current one.</p>
+</li>
+<li>
+<p>stickywinter should get the value of "W" for winter courses or "S" for summer courses.</p>
+</li>
+<li>
+<p>tabcount is used to filter the level of courses you want to display. "n1" is for 100 level. "n2" for 200 and so on. "u" is undergraduate while "g" is graduate.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_people">People</h3>
+<div class="paragraph">
+<p>The new People pages showcase the Faculty, Sessional and 12 month lecturers, Staff and Emeritae/Emeriti.</p>
+</div>
+<div class="paragraph">
+<p>All the subpages listed above were on separate sections of the old website. Putting under 1 umbrella - people - makes it easier to look for a particular person in the department. Each profile is housed in with the Spotlight feature. This allows listed people to stand out, but still be shown equally on a page.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/Faculty.png" alt="Faculty">
+</div>
+<div class="title">Figure 1. Example of a "People" page - The Faculty page</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_programs">Programs</h3>
+<div class="paragraph">
+<p>The new Programs pages are designed to make it easier to find a program and browse through it. Once a program is selected, it has a dedicated single page that guides prospective students through everything from entrance requirements to a convenient "Apply now" button.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/Programs.png" alt="Programs">
+</div>
+<div class="title">Figure 2. The new programs page</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ProgramsAlt.png" alt="ProgramsAlt">
+</div>
+<div class="title">Figure 3. Alternative view of programs by area</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ProgramsSample.png" alt="ProgramsSample">
+</div>
+<div class="title">Figure 4. An example of in-page navigation</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quick_search">Quick Search</h3>
+<div class="paragraph">
+<p>The old LLED site lacked an easily accessible and functional search tool. Searches were limited to the global UBC search tool which is housed in a small icon on the top right corner of every page. Most users of the site didn&#8217;t seem to be aware of this tool. For those that did use it, they were frequent complaints about the fact that it does a global search (all UBC sites), and returns many irrelevant results.</p>
+</div>
+<div class="paragraph">
+<p>To remedy this, a custom search tool was created to allow users to have a large, clearly visible search bar. The search bar would also filter results as you type making it an interactive and quick response tool. The backend code for this is based on the <a href="https://github.com/metafizzy/isotope">isotope plugin</a>. It was customised to filter LLED search items in tandem with <a href="#_the_spotlight">The Spotlight</a> feature.</p>
+</div>
+<div class="paragraph">
+<p>This code was developed specifically for LLED but should work on all websites if implemented correctly. Other departments within the faculty / other faculties are welcome to modify, share and use it. The backend code and documentation can be found <a href="https://github.com/darshandsoni/lled-quick-search">here</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://cloud.githubusercontent.com/assets/10469803/15833026/95fd4170-2bd9-11e6-820b-a7b29ab9ac9d.gif" alt="95fd4170 2bd9 11e6 820b a7b29ab9ac9d">
+</div>
+<div class="title">Figure 5. Screenshot of the Quick Search feature on the Student Resources page.</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_resources">Resources</h3>
+<div class="sect3">
+<h4 id="_departmental_resources">Departmental Resources</h4>
+<div class="paragraph">
+<p>The departmental resources page is an information based page used frequently by Faculty and Staff. Analytics from the old site indicated that users were often lost on the page and found it difficult to locate a particular item.</p>
+</div>
+<div class="paragraph">
+<p>The redesigned page has bold icon categories to visually guide users to a particular section using the Spotlight feature. Each link is then listed clearly, including it&#8217;s document type (e.g. PDF or Word) so that users can get exactly what they want without spending time searching for it.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DepartmentalResources.png" alt="DepartmentalResources">
+</div>
+<div class="title">Figure 6. The new departmental resources page</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_student_resources">Student Resources</h4>
+<div class="paragraph">
+<p>Student resources are not as frequently used as the departmental ones. There are more external links and based on the widespread variation in clicks, users are more likely to end up on the page out of curiosity than out of necessity. The page can therefore be used as a showcase to common questions and outline some important topics such as plagiarism. The page is designed to be more "fun" to look at with many animated tiles - which can all be filtered using the <a href="#_quick_search">Quick Search</a> tool.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/StudentResources.png" alt="StudentResources">
+</div>
+<div class="title">Figure 7. The new student resources page</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_style_guide">Style Guide</h2>
 <div class="sectionbody">
 <div class="sect2">
@@ -1365,188 +1545,7 @@ Links should preferably open in a new tab by default (subject the author&#8217;s
 </div>
 </div>
 <div class="sect1">
-<h2 id="_site_features">Site Features</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_job_postings">Job Postings</h3>
-<div class="paragraph">
-<p>Job postings can be added the same way as any other post, simply remember to choose the "Job Posting" category before publishing. After a Job Posting has expired, edit it and change it&#8217;s category to "Job Posting - Archive".</p>
-</div>
-<div class="paragraph">
-<p>Job postings have some specific formatting that needs to be followed. It may be best to open up an already existing Job Posting and copy data to the blank one you are making. Then edit the fine details.</p>
-</div>
-<div class="paragraph">
-<p>Each job posting needs to have the following:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Insert a title to briefly describe the area of employment e.g. Summer 2016 - Teaching English as a Foreign Language GTAs.</p>
-</li>
-<li>
-<p>Add a heading (h3 level) for the job  e.g. Part-time Graduate Teaching Assistants.</p>
-</li>
-<li>
-<p>Upload a PDF version of the posting by clicking on "Add Media". This will add a <code>&lt;a href=&#8230;&#8203;</code> section in the post.</p>
-</li>
-<li>
-<p>Below that <code>&lt;a href=&#8230;&#8203;</code> line, paste the following and add the correct date:</p>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="html">Application deadline: <span class="tag">&lt;span</span> <span class="attribute-name">style</span>=<span class="string"><span class="delimiter">&quot;</span><span class="key">color</span>: <span class="color">#ff0000</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;strong&gt;</span>May 20, 2016<span class="tag">&lt;/strong&gt;</span><span class="tag">&lt;/span&gt;</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Then, in the Excerpt section, paste the following code in, editing the position and deadline as necessary:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="html">Part-time Graduate Teaching Assistants <span class="tag">&lt;br&gt;</span>
-Application deadline: <span class="tag">&lt;span</span> <span class="attribute-name">style</span>=<span class="string"><span class="delimiter">&quot;</span><span class="key">color</span>: <span class="color">#ff0000</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;strong&gt;</span>May 20, 2016<span class="tag">&lt;/strong&gt;</span><span class="tag">&lt;/span&gt;</span></code></pre>
-</div>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Remember to click on "Job Posting" as the category.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_courses">Courses</h3>
-<div class="paragraph">
-<p>Courses on the new site are pulled in automatically from the calendar to avoid the tedious work of making posts for each course in each session. The new Courses page is set up to automatically display the Winter and Summer courses for the current year. This means no additional work for the office staff in terms of displaying courses on the front end. The downside of this is that office staff no longer have control over the titles and data displayed. As a compromise, each course accordion has a "Note" section before displaying courses. This section can be manually edited to point out whether courses are cross-listed or have special titles set by the instructors that are not reflected by UBC calendar. This isn&#8217;t the same degree of control as the old site, but it also eliminates the need for hours of course information input, communication erros and site clutter due to too many posts.</p>
-</div>
-<div class="paragraph">
-<div class="title">Technical details</div>
-<p>The courses are pulled in using the courses-shortcode plugin. This is relatively new and LLED would be the first department within the faculty to make use of it.</p>
-</div>
-<div class="paragraph">
-<p>Winter courses are pulled in using the following:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="html">[ubccourses department=&quot;LLED&quot; stickyyear=&quot;true&quot; stickywinter=&quot;W&quot; tabcount=&quot;g&quot;]</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>department = "LLED" filters only LLED courses out.</p>
-</li>
-<li>
-<p>stickyyear with a true value makes sure the year is always the current one.</p>
-</li>
-<li>
-<p>stickywinter should get the value of "W" for winter courses or "S" for summer courses.</p>
-</li>
-<li>
-<p>tabcount is used to filter the level of courses you want to display. "n1" is for 100 level. "n2" for 200 and so on. "u" is undergraduate while "g" is graduate.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_programs">Programs</h3>
-<div class="paragraph">
-<p>The new Programs pages are designed to make it easier to find a program and browse through it. Once a program is selected, it has a dedicated single page that guides prospective students through everything from entrance requirements to a convenient "Apply now" button.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/Programs.png" alt="Programs">
-</div>
-<div class="title">Figure 1. The new programs page</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/ProgramsAlt.png" alt="ProgramsAlt">
-</div>
-<div class="title">Figure 2. Alternative view of programs by area</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/ProgramsSample.png" alt="ProgramsSample">
-</div>
-<div class="title">Figure 3. An example of in-page navigation</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_resources">Resources</h3>
-<div class="sect3">
-<h4 id="_departmental_resources">Departmental Resources</h4>
-<div class="paragraph">
-<p>The departmental resources page is an information based page used frequently by Faculty and Staff. Analytics from the old site indicated that users were often lost on the page and found it difficult to locate a particular item.</p>
-</div>
-<div class="paragraph">
-<p>The redesigned page has bold icon categories to visually guide users to a particular section using the Spotlight feature. Each link is then listed clearly, including it&#8217;s document type (e.g. PDF or Word) so that users can get exactly what they want without spending time searching for it.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/DepartmentalResources.png" alt="DepartmentalResources">
-</div>
-<div class="title">Figure 4. The new departmental resources page</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_student_resources">Student Resources</h4>
-<div class="paragraph">
-<p>Student resources are not as frequently used as the departmental ones. There are more external links and based on the widespread variation in clicks, users are more likely to end up on the page out of curiosity than out of necessity. The page can therefore be used as a showcase to common questions and outline some important topics such as plagiarism. The page is designed to be more "fun" to look at with many animated tiles - which can all be filtered using the <a href="#_quick_search">Quick Search</a> tool.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/StudentResources.png" alt="StudentResources">
-</div>
-<div class="title">Figure 5. The new student resources page</div>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_people">People</h3>
-<div class="paragraph">
-<p>The new People pages showcase the Faculty, Sessional and 12 month lecturers, Staff and Emeritae/Emeriti.</p>
-</div>
-<div class="paragraph">
-<p>All the subpages listed above were on separate sections of the old website. Putting under 1 umbrella - people - makes it easier to look for a particular person in the department. Each profile is housed in with the Spotlight feature. This allows listed people to stand out, but still be shown equally on a page.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/Faculty.png" alt="Faculty">
-</div>
-<div class="title">Figure 6. Example of a "People" page - The Faculty page</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_quick_search">Quick Search</h3>
-<div class="paragraph">
-<p>The old LLED site lacked an easily accessible and functional search tool. Searches were limited to the global UBC search tool which is housed in a small icon on the top right corner of every page. Most users of the site didn&#8217;t seem to be aware of this tool. For those that did use it, they were frequent complaints about the fact that it does a global search (all UBC sites), and returns many irrelevant results.</p>
-</div>
-<div class="paragraph">
-<p>To remedy this, a custom search tool was created to allow users to have a large, clearly visible search bar. The search bar would also filter results as you type making it an interactive and quick response tool. The backend code for this is based on the <a href="https://github.com/metafizzy/isotope">isotope plugin</a>. It was customised to filter LLED search items in tandem with <a href="#_the_spotlight">The Spotlight</a> feature.</p>
-</div>
-<div class="paragraph">
-<p>This code was developed specifically for LLED but should work on all websites if implemented correctly. Other departments within the faculty / other faculties are welcome to modify, share and use it. The backend code and documentation can be found <a href="https://github.com/darshandsoni/lled-quick-search">here</a>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="https://cloud.githubusercontent.com/assets/10469803/15833026/95fd4170-2bd9-11e6-820b-a7b29ab9ac9d.gif" alt="95fd4170 2bd9 11e6 820b a7b29ab9ac9d">
-</div>
-<div class="title">Figure 7. Screenshot of the Quick Search feature on the Student Resources page.</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_quick_how_to_guide">Quick How-to Guide</h2>
+<h2 id="_how_to_guide">How-to Guide</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_homepage">Homepage</h3>
@@ -1672,7 +1671,7 @@ The Research page automatically pools in all the research posts and displays a s
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-06 14:06:09 PDT
+Last updated 2016-06-23 10:14:20 PDT
 </div>
 </div>
 </body>

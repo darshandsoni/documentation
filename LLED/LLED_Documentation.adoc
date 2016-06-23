@@ -201,7 +201,111 @@ As a result, a Resources page can be created to serve as a point of reference fo
 
 NOTE: Anthony suggested adding a dedicated Research page as well. This would showcase Faculty and Grad student research like news articles. The page would also have an archive section with annual research material.
 
+
 ---
+
+== Site Features
+
+=== Courses
+
+Courses on the new site are pulled in automatically from the calendar to avoid the tedious work of making posts for each course in each session. The new Courses page is set up to automatically display the Winter and Summer courses for the current year. This means no additional work for the office staff in terms of displaying courses on the front end. The downside of this is that office staff no longer have control over the titles and data displayed. As a compromise, each course accordion has a "Note" section before displaying courses. This section can be manually edited to point out whether courses are cross-listed or have special titles set by the instructors that are not reflected by UBC calendar. This isn't the same degree of control as the old site, but it also eliminates the need for hours of course information input, communication erros and site clutter due to too many posts.
+
+.Technical details
+
+The courses are pulled in using the courses-shortcode plugin. This is relatively new and LLED would be the first department within the faculty to make use of it.
+
+Winter courses are pulled in using the following:
+
+[source,html]
+----
+[ubccourses department="LLED" stickyyear="true" stickywinter="W" tabcount="g"]
+----
+
+
+=== Job Postings
+
+Job postings can be added the same way as any other post, simply remember to choose the "Job Posting" category before publishing. After a Job Posting has expired, edit it and change it's category to "Job Posting - Archive".
+
+Job postings have some specific formatting that needs to be followed. It may be best to open up an already existing Job Posting and copy data to the blank one you are making. Then edit the fine details.
+
+Each job posting needs to have the following:
+
+1. Insert a title to briefly describe the area of employment e.g. Summer 2016 - Teaching English as a Foreign Language GTAs.
+2. Add a heading (h3 level) for the job  e.g. Part-time Graduate Teaching Assistants.
+3. Upload a PDF version of the posting by clicking on "Add Media". This will add a `<a href=...` section in the post.
+4. Below that `<a href=...` line, paste the following and add the correct date:
+
+[source,html]
+----
+Application deadline: <span style="color: #ff0000"><strong>May 20, 2016</strong></span>
+----
+
+Then, in the Excerpt section, paste the following code in, editing the position and deadline as necessary:
+
+[source,html]
+----
+Part-time Graduate Teaching Assistants <br>
+Application deadline: <span style="color: #ff0000"><strong>May 20, 2016</strong></span>
+----
+
+TIP: Remember to click on "Job Posting" as the category.
+
+
+* department = "LLED" filters only LLED courses out.
+* stickyyear with a true value makes sure the year is always the current one.
+* stickywinter should get the value of "W" for winter courses or "S" for summer courses.
+* tabcount is used to filter the level of courses you want to display. "n1" is for 100 level. "n2" for 200 and so on. "u" is undergraduate while "g" is graduate.
+
+=== People
+
+The new People pages showcase the Faculty, Sessional and 12 month lecturers, Staff and Emeritae/Emeriti.
+
+All the subpages listed above were on separate sections of the old website. Putting under 1 umbrella - people - makes it easier to look for a particular person in the department. Each profile is housed in with the Spotlight feature. This allows listed people to stand out, but still be shown equally on a page.
+
+.Example of a "People" page - The Faculty page
+image::images/Faculty.png[]
+
+=== Programs
+
+The new Programs pages are designed to make it easier to find a program and browse through it. Once a program is selected, it has a dedicated single page that guides prospective students through everything from entrance requirements to a convenient "Apply now" button.
+
+.The new programs page
+image::images/Programs.png[]
+
+.Alternative view of programs by area
+image::images/ProgramsAlt.png[]
+
+.An example of in-page navigation
+image::images/ProgramsSample.png[scaledwidth="25%"]
+
+=== Quick Search
+
+The old LLED site lacked an easily accessible and functional search tool. Searches were limited to the global UBC search tool which is housed in a small icon on the top right corner of every page. Most users of the site didn't seem to be aware of this tool. For those that did use it, they were frequent complaints about the fact that it does a global search (all UBC sites), and returns many irrelevant results.
+
+To remedy this, a custom search tool was created to allow users to have a large, clearly visible search bar. The search bar would also filter results as you type making it an interactive and quick response tool. The backend code for this is based on the https://github.com/metafizzy/isotope[isotope plugin]. It was customised to filter LLED search items in tandem with <<_the_spotlight>> feature.
+
+This code was developed specifically for LLED but should work on all websites if implemented correctly. Other departments within the faculty / other faculties are welcome to modify, share and use it. The backend code and documentation can be found https://github.com/darshandsoni/lled-quick-search[here].
+
+.Screenshot of the Quick Search feature on the Student Resources page.
+image::https://cloud.githubusercontent.com/assets/10469803/15833026/95fd4170-2bd9-11e6-820b-a7b29ab9ac9d.gif[]
+
+=== Resources
+
+==== Departmental Resources
+
+The departmental resources page is an information based page used frequently by Faculty and Staff. Analytics from the old site indicated that users were often lost on the page and found it difficult to locate a particular item.
+
+The redesigned page has bold icon categories to visually guide users to a particular section using the Spotlight feature. Each link is then listed clearly, including it's document type (e.g. PDF or Word) so that users can get exactly what they want without spending time searching for it.
+
+.The new departmental resources page
+image::images/DepartmentalResources.png[]
+
+==== Student Resources
+
+Student resources are not as frequently used as the departmental ones. There are more external links and based on the widespread variation in clicks, users are more likely to end up on the page out of curiosity than out of necessity. The page can therefore be used as a showcase to common questions and outline some important topics such as plagiarism. The page is designed to be more "fun" to look at with many animated tiles - which can all be filtered using the <<_quick_search>> tool.
+
+.The new student resources page
+image::images/StudentResources.png[]
 
 == Style Guide
 
@@ -373,111 +477,8 @@ To use the spotlight, simply append the term "spotlight" on any div or section. 
 
 <<<
 
-== Site Features
 
-=== Job Postings
-
-Job postings can be added the same way as any other post, simply remember to choose the "Job Posting" category before publishing. After a Job Posting has expired, edit it and change it's category to "Job Posting - Archive".
-
-Job postings have some specific formatting that needs to be followed. It may be best to open up an already existing Job Posting and copy data to the blank one you are making. Then edit the fine details.
-
-Each job posting needs to have the following:
-
-1. Insert a title to briefly describe the area of employment e.g. Summer 2016 - Teaching English as a Foreign Language GTAs.
-2. Add a heading (h3 level) for the job  e.g. Part-time Graduate Teaching Assistants.
-3. Upload a PDF version of the posting by clicking on "Add Media". This will add a `<a href=...` section in the post.
-4. Below that `<a href=...` line, paste the following and add the correct date:
-
-[source,html]
-----
-Application deadline: <span style="color: #ff0000"><strong>May 20, 2016</strong></span>
-----
-
-Then, in the Excerpt section, paste the following code in, editing the position and deadline as necessary:
-
-[source,html]
-----
-Part-time Graduate Teaching Assistants <br>
-Application deadline: <span style="color: #ff0000"><strong>May 20, 2016</strong></span>
-----
-
-TIP: Remember to click on "Job Posting" as the category.
-
-=== Courses
-
-Courses on the new site are pulled in automatically from the calendar to avoid the tedious work of making posts for each course in each session. The new Courses page is set up to automatically display the Winter and Summer courses for the current year. This means no additional work for the office staff in terms of displaying courses on the front end. The downside of this is that office staff no longer have control over the titles and data displayed. As a compromise, each course accordion has a "Note" section before displaying courses. This section can be manually edited to point out whether courses are cross-listed or have special titles set by the instructors that are not reflected by UBC calendar. This isn't the same degree of control as the old site, but it also eliminates the need for hours of course information input, communication erros and site clutter due to too many posts.
-
-.Technical details
-
-The courses are pulled in using the courses-shortcode plugin. This is relatively new and LLED would be the first department within the faculty to make use of it.
-
-Winter courses are pulled in using the following:
-
-[source,html]
-----
-[ubccourses department="LLED" stickyyear="true" stickywinter="W" tabcount="g"]
-----
-
-
-* department = "LLED" filters only LLED courses out.
-* stickyyear with a true value makes sure the year is always the current one.
-* stickywinter should get the value of "W" for winter courses or "S" for summer courses.
-* tabcount is used to filter the level of courses you want to display. "n1" is for 100 level. "n2" for 200 and so on. "u" is undergraduate while "g" is graduate.
-
-=== Programs
-
-The new Programs pages are designed to make it easier to find a program and browse through it. Once a program is selected, it has a dedicated single page that guides prospective students through everything from entrance requirements to a convenient "Apply now" button.
-
-.The new programs page
-image::images/Programs.png[]
-
-.Alternative view of programs by area
-image::images/ProgramsAlt.png[]
-
-.An example of in-page navigation
-image::images/ProgramsSample.png[scaledwidth="25%"]
-
-=== Resources
-
-==== Departmental Resources
-
-The departmental resources page is an information based page used frequently by Faculty and Staff. Analytics from the old site indicated that users were often lost on the page and found it difficult to locate a particular item.
-
-The redesigned page has bold icon categories to visually guide users to a particular section using the Spotlight feature. Each link is then listed clearly, including it's document type (e.g. PDF or Word) so that users can get exactly what they want without spending time searching for it.
-
-.The new departmental resources page
-image::images/DepartmentalResources.png[]
-
-==== Student Resources
-
-Student resources are not as frequently used as the departmental ones. There are more external links and based on the widespread variation in clicks, users are more likely to end up on the page out of curiosity than out of necessity. The page can therefore be used as a showcase to common questions and outline some important topics such as plagiarism. The page is designed to be more "fun" to look at with many animated tiles - which can all be filtered using the <<_quick_search>> tool.
-
-.The new student resources page
-image::images/StudentResources.png[]
-
-<<<
-
-=== People
-
-The new People pages showcase the Faculty, Sessional and 12 month lecturers, Staff and Emeritae/Emeriti.
-
-All the subpages listed above were on separate sections of the old website. Putting under 1 umbrella - people - makes it easier to look for a particular person in the department. Each profile is housed in with the Spotlight feature. This allows listed people to stand out, but still be shown equally on a page.
-
-.Example of a "People" page - The Faculty page
-image::images/Faculty.png[]
-
-=== Quick Search
-
-The old LLED site lacked an easily accessible and functional search tool. Searches were limited to the global UBC search tool which is housed in a small icon on the top right corner of every page. Most users of the site didn't seem to be aware of this tool. For those that did use it, they were frequent complaints about the fact that it does a global search (all UBC sites), and returns many irrelevant results.
-
-To remedy this, a custom search tool was created to allow users to have a large, clearly visible search bar. The search bar would also filter results as you type making it an interactive and quick response tool. The backend code for this is based on the https://github.com/metafizzy/isotope[isotope plugin]. It was customised to filter LLED search items in tandem with <<_the_spotlight>> feature.
-
-This code was developed specifically for LLED but should work on all websites if implemented correctly. Other departments within the faculty / other faculties are welcome to modify, share and use it. The backend code and documentation can be found https://github.com/darshandsoni/lled-quick-search[here].
-
-.Screenshot of the Quick Search feature on the Student Resources page.
-image::https://cloud.githubusercontent.com/assets/10469803/15833026/95fd4170-2bd9-11e6-820b-a7b29ab9ac9d.gif[]
-
-== Quick How-to Guide
+== How-to Guide
 
 === Homepage
 
