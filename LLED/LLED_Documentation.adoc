@@ -154,8 +154,6 @@ Some other analytics that aren't used, but interesting to know anyway...
 
 image::images/Country.png[]
 
-image::
-
 ---
 
 == Site Navigation
@@ -220,6 +218,10 @@ Winter courses are pulled in using the following:
 ----
 [ubccourses department="LLED" stickyyear="true" stickywinter="W" tabcount="g"]
 ----
+
+.Configurations
+
+department="..." pulls in courses from a particular department. For LIBE courses, replace LLED with LIBE. The abbreviations are the same as course abbreviations. "stickyyear" should generally be left true, unless you are displaying archived information. This means it will always render information for the current academic year. Stickywinter gets "W" to show winter courses and "S" to display summer ones. And tabcount gets "g" to display graduate level courses, "u" for undergraduate courses. Full documentation on this plugin can be found https://github.com/darshandsoni/course-shortcode[here].
 
 
 === Job Postings
@@ -502,9 +504,9 @@ Some users report not seeing the widget. In this case, it's normally due to thei
 
 See the section on <<_job_postings>>
 
-=== New and events
+=== News and events
 
-Make a new post. Before publishing, ensure that the category selection in the panel to the right of the page is "New and events".
+Make a new post. Before publishing, ensure that the category selection in the panel to the right of the page is "News and events". Choose a featured image too so that it appears with a thumbnail on the main "News and Events" pages.
 
 === Research
 
@@ -534,3 +536,40 @@ The following websites have some CC pictures that can be used for backgrounds / 
 2. https://unsplash.com/[Unsplash] - Creative Common's Zero licence - Copy, modify, distribute and use the photos for free, including commercial purposes, without asking permission from or providing attribution to the photographer or Unsplash.
 3. http://www.beiz.jp/[Beiz (Japanese)] - The contract on the site (link provided by Yuya Takeda) suggests all material is free for use.
 4. http://dohliam.github.io/yub/[The yub search engine] - Type in "fcc" and any topic e.g. fcc flowers for cc pictures of flowers. These are sourced from Flickr's creative commons.
+
+=== Tables
+
+To quickly add a table from a spreadsheet (like excel) to the website, you can use this cool trick:
+
+. Select all the cells that form part of the table in Excel. Be sure that there are no extra cells selected - these will be rendered on the website too.
+
+. Go to http://tableizer.journalistopia.com/[The Tableizer] website and paste in the data. *Be sure to check the "No CSS"* button before hitting the "Tableize It!" button. This will make sure there are no crappy table styles included in the code.
+
+. Paste the resulting html markup into the LLED website.
+
+. Make the following edits to the code:
++
+[source,html]
+----
+<table class="tableizer-table">
+----
+To make it:
++
+[source,html]
+----
+<table class="table table-bordered table-striped">
+----
+
+. Also change the following:
++
+[source,html]
+----
+<tr class="tableizer-firstrow">
+----
+To make it just:
++
+[source,html]
+----
+<tr>
+----
+And that should be all.

@@ -573,11 +573,12 @@ table.CodeRay td.code>pre{padding:0}
 <ul class="sectlevel2">
 <li><a href="#_homepage">Homepage</a></li>
 <li><a href="#_job_posting">Job posting</a></li>
-<li><a href="#_new_and_events">New and events</a></li>
+<li><a href="#_news_and_events">News and events</a></li>
 <li><a href="#_research">Research</a></li>
 <li><a href="#_courses_2">Courses</a></li>
 <li><a href="#_programs_2">Programs</a></li>
 <li><a href="#_pictures">Pictures</a></li>
+<li><a href="#_tables">Tables</a></li>
 </ul>
 </li>
 </ul>
@@ -969,14 +970,7 @@ Users of Internet explorer versions below 10 would suffer from many glitches and
 <img src="images/Country.png" alt="Country">
 </div>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">image</dt>
-<dd>
-<p>---</p>
-</dd>
-</dl>
-</div>
+<hr>
 </div>
 </div>
 </div>
@@ -1073,6 +1067,10 @@ Anthony suggested adding a dedicated Research page as well. This would showcase 
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="html">[ubccourses department=&quot;LLED&quot; stickyyear=&quot;true&quot; stickywinter=&quot;W&quot; tabcount=&quot;g&quot;]</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<div class="title">Configurations</div>
+<p>department="&#8230;&#8203;" pulls in courses from a particular department. For LIBE courses, replace LLED with LIBE. The abbreviations are the same as course abbreviations. "stickyyear" should generally be left true, unless you are displaying archived information. This means it will always render information for the current academic year. Stickywinter gets "W" to show winter courses and "S" to display summer ones. And tabcount gets "g" to display graduate level courses, "u" for undergraduate courses. Full documentation on this plugin can be found <a href="https://github.com/darshandsoni/course-shortcode">here</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1591,9 +1589,9 @@ Links should preferably open in a new tab by default (subject the author&#8217;s
 </div>
 </div>
 <div class="sect2">
-<h3 id="_new_and_events">New and events</h3>
+<h3 id="_news_and_events">News and events</h3>
 <div class="paragraph">
-<p>Make a new post. Before publishing, ensure that the category selection in the panel to the right of the page is "New and events".</p>
+<p>Make a new post. Before publishing, ensure that the category selection in the panel to the right of the page is "News and events". Choose a featured image too so that it appears with a thumbnail on the main "News and Events" pages.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1666,12 +1664,66 @@ The Research page automatically pools in all the research posts and displays a s
 </ol>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_tables">Tables</h3>
+<div class="paragraph">
+<p>To quickly add a table from a spreadsheet (like excel) to the website, you can use this cool trick:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select all the cells that form part of the table in Excel. Be sure that there are no extra cells selected - these will be rendered on the website too.</p>
+</li>
+<li>
+<p>Go to <a href="http://tableizer.journalistopia.com/">The Tableizer</a> website and paste in the data. <strong>Be sure to check the "No CSS"</strong> button before hitting the "Tableize It!" button. This will make sure there are no crappy table styles included in the code.</p>
+</li>
+<li>
+<p>Paste the resulting html markup into the LLED website.</p>
+</li>
+<li>
+<p>Make the following edits to the code:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="html"><span class="tag">&lt;table</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">tableizer-table</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To make it:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="html"><span class="tag">&lt;table</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">table table-bordered table-striped</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Also change the following:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="html"><span class="tag">&lt;tr</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">tableizer-firstrow</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To make it just:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="html"><span class="tag">&lt;tr&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And that should be all.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-23 10:14:20 PDT
+Last updated 2016-07-21 16:09:31 PDT
 </div>
 </div>
 </body>
