@@ -150,7 +150,7 @@ image::images/WindowWidth.png[]
 
 === Other analytics
 
-Some other analytics that aren't used, but interesting to know anyway...
+Some other analytics that aren't used, but interesting to know anyway:
 
 image::images/Country.png[]
 
@@ -221,7 +221,7 @@ Winter courses are pulled in using the following:
 
 .Configurations
 
-department="..." pulls in courses from a particular department. For LIBE courses, replace LLED with LIBE. The abbreviations are the same as course abbreviations. "stickyyear" should generally be left true, unless you are displaying archived information. This means it will always render information for the current academic year. Stickywinter gets "W" to show winter courses and "S" to display summer ones. And tabcount gets "g" to display graduate level courses, "u" for undergraduate courses. Full documentation on this plugin can be found https://github.com/darshandsoni/course-shortcode[here].
+department="something" pulls in courses from a particular department. For LIBE courses, replace LLED with LIBE. The abbreviations are the same as course abbreviations. "stickyyear" should generally be left true, unless you are displaying archived information. This means it will always render information for the current academic year. Stickywinter gets "W" to show winter courses and "S" to display summer ones. And tabcount gets "g" to display graduate level courses, "u" for undergraduate courses. Full documentation on this plugin can be found https://github.com/darshandsoni/course-shortcode[here].
 
 
 === Job Postings
@@ -234,8 +234,8 @@ Each job posting needs to have the following:
 
 1. Insert a title to briefly describe the area of employment e.g. Summer 2016 - Teaching English as a Foreign Language GTAs.
 2. Add a heading (h3 level) for the job  e.g. Part-time Graduate Teaching Assistants.
-3. Upload a PDF version of the posting by clicking on "Add Media". This will add a `<a href=...` section in the post.
-4. Below that `<a href=...` line, paste the following and add the correct date:
+3. Upload a PDF version of the posting by clicking on "Add Media". This will add a **<a href=something** section in the post.
+4. Below that **<a href=something** line, paste the following and add the correct date:
 
 [source,html]
 ----
@@ -288,8 +288,8 @@ To remedy this, a custom search tool was created to allow users to have a large,
 
 This code was developed specifically for LLED but should work on all websites if implemented correctly. Other departments within the faculty / other faculties are welcome to modify, share and use it. The backend code and documentation can be found https://github.com/darshandsoni/lled-quick-search[here].
 
-.Screenshot of the Quick Search feature on the Student Resources page.
-image::https://cloud.githubusercontent.com/assets/10469803/15833026/95fd4170-2bd9-11e6-820b-a7b29ab9ac9d.gif[]
+//.Screenshot of the Quick Search feature on the Student Resources page.
+//image::https://cloud.githubusercontent.com/assets/10469803/15833026/95fd4170-2bd9-11e6-820b-a7b29ab9ac9d.gif[]
 
 === Resources
 
@@ -488,7 +488,7 @@ The spotlight card has no specified width, so invoking it will make a container 
 [/column]
 ----
 
-A column of size 12 spans the entire page - you cannot have a column size bigger than this. 6 spans half the page, 3 spans a quarter, and so on. You can mix and match, so long as you know that the total number of columns on the page add up to 12. So you can have a 4-4-4, 3-3-3-3, 10-2, 6-4-2...
+A column of size 12 spans the entire page - you cannot have a column size bigger than this. 6 spans half the page, 3 spans a quarter, and so on. You can mix and match, so long as you know that the total number of columns on the page add up to 12. So you can have a 4-4-4, 3-3-3-3, 10-2, 6-4-2 and so on.
 
 
 <<<
@@ -546,7 +546,7 @@ To make a new post, visit the http://lled.educ.ubc.ca/research/[Research] page a
 
 Because this feature is publicly available, the post will be saved as a draft instead of being published. A site administrator (member of staff e.g. Ana or Lia) would receive an email about it, and can then go in to the site and approve the post.
 
-WARNING: Adding a post in the Research category should be done as outlined above instead of the usual manual post creation method because there is a preset format for the post. Creating a post manually (New -> Post) and then creating content from scratch would be cumbersome and would display poorly on the page.
+WARNING: Adding a post in the Research category should be done as outlined above instead of the usual manual post creation method because there is a preset format for the post. Creating a post manually (New Post) and then creating content from scratch would be cumbersome and would display poorly on the page.
 
 NOTE: The Research page automatically pools in all the research posts and displays a selection of the latest ones in a mosaic-like layout. This is all done automatically according to a best fit model. Changing the layout of the page should be done very carefully.
 
