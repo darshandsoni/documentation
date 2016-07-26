@@ -477,10 +477,40 @@ To use the spotlight, simply append the term "spotlight" on any div or section. 
 </div>
 ----
 
+The spotlight card has no specified width, so invoking it will make a container that spans the width of the page by default. To make "cards" across the page, you'll have to use it in tandem with colums. Columns can be added with a quick shortcode:
+
+[source,html]
+----
+[column size=4]
+<div class="spotlight">
+  <p>All the content here</p>
+</div>
+[/column]
+----
+
+A column of size 12 spans the entire page - you cannot have a column size bigger than this. 6 spans half the page, 3 spans a quarter, and so on. You can mix and match, so long as you know that the total number of columns on the page add up to 12. So you can have a 4-4-4, 3-3-3-3, 10-2, 6-4-2...
+
+
 <<<
 
 
 == How-to Guide
+
+=== Faculty Profiles
+
+To add a new Faculty member, do the following:
+
+. From the "Profiles" menu, click the "Add New" button.
+. Add their names / picture etc.
+. Under the "Faculty Profiles" dropdown menu, click on "faculty". Leave the "Student Profiles" dropdown menu to "None".
+. Save it.
+
+.Ordering profiles correctly
+To put someone in the correct order on the "Faculty" page, do the following:
+
+. Under the "Profiles" menu, click the "Order Profiles" option. (I know - poor design but what to do?). Then under the first dropdown menu, click "faculty" to filter only faculty members.
+. You'll notice that only Faculty members are displayed now. At the very top of the page you'll find "Quick Sort: Last name". Hit that and save.
+. The profile will now appear in the correct position.
 
 === Homepage
 
@@ -526,7 +556,7 @@ See the section on <<_courses>>
 
 === Programs
 
-The programs landing page is CSS heavy. The content on it rarely needs change, unless an entire program is renamed / scrapped or added. In this instance, try and use the **text** layout, instead of the **visual** one to edit content. The text layout window may look ugly with a lot of html markup, but it's important to be able to tell where you're putting in content so you don't break the page layout. This is not a difficult task but should be done by someone who is somewhat familiar with basic HTML / CSS notation.
+The programs landing page is CSS heavy. The content on it rarely needs change, unless an entire program is renamed / scrapped or added. In this instance, try and use the **text** layout, instead of the **visual** one to edit content. The text layout window may look ugly with a lot of html markup, but it's important to be able to tell where you're putting in content so you don't break the page layout. This is not a difficult task but should be done once you are familiar with HTML / CSS notation.
 
 === Pictures
 

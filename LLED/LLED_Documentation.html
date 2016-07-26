@@ -571,6 +571,7 @@ table.CodeRay td.code>pre{padding:0}
 </li>
 <li><a href="#_how_to_guide">How-to Guide</a>
 <ul class="sectlevel2">
+<li><a href="#_faculty_profiles">Faculty Profiles</a></li>
 <li><a href="#_homepage">Homepage</a></li>
 <li><a href="#_job_posting">Job posting</a></li>
 <li><a href="#_news_and_events">News and events</a></li>
@@ -1538,6 +1539,21 @@ Links should preferably open in a new tab by default (subject the author&#8217;s
 <span class="tag">&lt;/div&gt;</span></code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>The spotlight card has no specified width, so invoking it will make a container that spans the width of the page by default. To make "cards" across the page, you&#8217;ll have to use it in tandem with colums. Columns can be added with a quick shortcode:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="html">[column size=4]
+<span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">spotlight</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;p&gt;</span>All the content here<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+[/column]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A column of size 12 spans the entire page - you cannot have a column size bigger than this. 6 spans half the page, 3 spans a quarter, and so on. You can mix and match, so long as you know that the total number of columns on the page add up to 12. So you can have a 4-4-4, 3-3-3-3, 10-2, 6-4-2&#8230;&#8203;</p>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -1545,6 +1561,45 @@ Links should preferably open in a new tab by default (subject the author&#8217;s
 <div class="sect1">
 <h2 id="_how_to_guide">How-to Guide</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_faculty_profiles">Faculty Profiles</h3>
+<div class="paragraph">
+<p>To add a new Faculty member, do the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the "Profiles" menu, click the "Add New" button.</p>
+</li>
+<li>
+<p>Add their names / picture etc.</p>
+</li>
+<li>
+<p>Under the "Faculty Profiles" dropdown menu, click on "faculty". Leave the "Student Profiles" dropdown menu to "None".</p>
+</li>
+<li>
+<p>Save it.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Ordering profiles correctly</div>
+<p>To put someone in the correct order on the "Faculty" page, do the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Under the "Profiles" menu, click the "Order Profiles" option. (I know - poor design but what to do?). Then under the first dropdown menu, click "faculty" to filter only faculty members.</p>
+</li>
+<li>
+<p>You&#8217;ll notice that only Faculty members are displayed now. At the very top of the page you&#8217;ll find "Quick Sort: Last name". Hit that and save.</p>
+</li>
+<li>
+<p>The profile will now appear in the correct position.</p>
+</li>
+</ol>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_homepage">Homepage</h3>
 <div class="sect3">
@@ -1639,7 +1694,7 @@ The Research page automatically pools in all the research posts and displays a s
 <div class="sect2">
 <h3 id="_programs_2">Programs</h3>
 <div class="paragraph">
-<p>The programs landing page is CSS heavy. The content on it rarely needs change, unless an entire program is renamed / scrapped or added. In this instance, try and use the <strong>text</strong> layout, instead of the <strong>visual</strong> one to edit content. The text layout window may look ugly with a lot of html markup, but it&#8217;s important to be able to tell where you&#8217;re putting in content so you don&#8217;t break the page layout. This is not a difficult task but should be done by someone who is somewhat familiar with basic HTML / CSS notation.</p>
+<p>The programs landing page is CSS heavy. The content on it rarely needs change, unless an entire program is renamed / scrapped or added. In this instance, try and use the <strong>text</strong> layout, instead of the <strong>visual</strong> one to edit content. The text layout window may look ugly with a lot of html markup, but it&#8217;s important to be able to tell where you&#8217;re putting in content so you don&#8217;t break the page layout. This is not a difficult task but should be done once you are familiar with HTML / CSS notation.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1723,7 +1778,7 @@ The Research page automatically pools in all the research posts and displays a s
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-21 16:09:31 PDT
+Last updated 2016-07-26 11:12:14 PDT
 </div>
 </div>
 </body>
